@@ -4,7 +4,7 @@ void merge(int *array,int left, int mid, int right){
     int result[right - left];
     int it1 = 0, it2 = 0;
     while(left + it1 < mid && mid + it2 < right){
-        if(*(array + left + it1) < *(array + mid + it2)){
+        if(*(array + left + it1) <= *(array + mid + it2)){
             result[it1 + it2] = *(array + left + it1);
             it1++;
         }
