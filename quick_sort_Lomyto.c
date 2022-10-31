@@ -21,7 +21,7 @@ int partition(int *array, int left, int right){
 void quick_sort(int *array, int left, int right){
     if(left < right){
         int q = partition(array, left, right);
-        quick_sort(array, left, q -1);
+        quick_sort(array, left, q-1);
         quick_sort(array, q+1 , right);
     }
 

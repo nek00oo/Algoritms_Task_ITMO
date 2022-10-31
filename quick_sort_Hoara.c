@@ -6,7 +6,7 @@ void swap(int *one, int *two){
 }
 
 void quick_sort(int* array, int left, int right){
-    int i =left;
+    int i = left;
     int j = right;
     int x = array[(right + left) / 2];
     while(i <= j){
@@ -15,10 +15,9 @@ void quick_sort(int* array, int left, int right){
         if(i<=j){
             swap(&array[i++],&array[j--]);
         }
-        if(left < j) quick_sort(array, left, j);
-        if(i < right) quick_sort(array, i, right);
     }
-
+    if(left < j) quick_sort(array, left, j);
+    if(i < right) quick_sort(array, i, right);
 }
 
 int main(int argc, char *argv[]){
